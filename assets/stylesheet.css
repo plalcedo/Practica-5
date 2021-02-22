@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+    border: 2px red solid;
+    animation: animacion 2s infinite;
+    position: relative;
+}
+
+@keyframes animacion {
+    from {
+        background-color: red;
+        left: 0;
+    }
+    to {
+        background-color: royalblue;
+        border: 2px royalblue solid;
+        left: 60%;
+        border-radius: 80%;
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        background-color: red;
+        left: 0;
+    }
+    25% {
+        background-color: green;
+        left: 25%;
+        border-radius: 25%;
+    }
+    50% {
+        background-color: yellow;
+        left: 50%;
+        border-radius: 50%;
+    }
+    75% {
+        background-color: purple;
+        left: 75%;
+        border-radius: 75%;
+    }
+    100% {
+        background-color: blue;
+        left: 100%;
+        border-radius: 100%;
+    }
+}
