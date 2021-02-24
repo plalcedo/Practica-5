@@ -4,7 +4,23 @@
     box-sizing: border-box;
 }
 
-header {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    width: 300vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+section {
     background-color: #333;
     color: whitesmoke;
     display: flex;
@@ -12,7 +28,130 @@ header {
     align-items: center;
     justify-content: center;
     padding: 150px;
+    width: 100vw;
+    height: 100vh;
+    top: 0 left;
 }
+
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 90%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+#welcomeSection {
+    animation: sectionWelcome 2s;
+}
+
+#welcomeH1 {
+    animation: welcomeMessage 5s;
+}
+
+#colors {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(#8407ad, #b50d77, #5142db, #18d8ed, #28c772, #aed633, #d6a033, #d65c33);
+    border-radius: 50%;
+    animation: rotate infinite linear 1s;
+    filter: blur(20px);
+}
+
+#static {
+    width: 350px;
+    height: 350px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+#ring>div {
+    position: absolute;
+}
+
+#goodbye h1 {
+    font-size: 100px;
+    position: absolute;
+}
+
+#gb1 {
+    animation: goodbye1 1s infinite;
+}
+
+#gb2 {
+    animation: goodbye2 2s infinite;
+}
+
+
+/* Animación de la práctica 5 */
+
+@keyframes sectionWelcome {
+    from {
+        background-color: transparent;
+        height: 0vh;
+    }
+    to {
+        background-color: #333;
+        height: 100vh;
+    }
+}
+
+@keyframes welcomeMessage {
+    from {
+        color: transparent;
+    }
+    to {
+        color: white;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes goodbye1 {
+    from {
+        font-size: 0px;
+        color: transparent;
+    }
+    to {
+        font-size: 100px;
+        color: white;
+    }
+}
+
+@keyframes goodbye2 {
+    from {
+        font-size: 100px;
+        color: white;
+    }
+    to {
+        font-size: 0px;
+        color: transparent;
+    }
+}
+
+
+/* Animación del cuadrado*/
 
 .square {
     width: 300px;
